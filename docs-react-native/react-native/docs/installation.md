@@ -32,6 +32,23 @@ npx react-native run-ios
 npx react-native run-android
 ```
 
+## Android SDK 33 notice
+Please note that as of Notifee Version 6.0.0 your project needs to use Android SDK 33.
+
+If you don't have Android SDK 33 installed yet, open Android Studio and go to `File > Settings > Appearance & Behaviour > System Settings > Android SDK` and install Android SDK 33 from there.
+
+Additionally, open the `android/build.gradle` file and update `compileSdkVersion` as well as `targetSdkVersion` there:
+```
+buildscript {
+    ext {
+        // ...
+        compileSdkVersion = 33
+        targetSdkVersion = 33
+        // ...
+    }
+}
+```
+
 ## Miscellaneous
 
 ### Expo Support
